@@ -429,7 +429,7 @@ function submitForm(){
   var email=document.getElementById('f-email').value.trim();
   var msg=document.getElementById('f-msg').value.trim();
   if(!name||!email||!msg){alert('Merci de remplir tous les champs obligatoires.');return;}
-  fetch('https://formspree.io/f/mrewerrr',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email,message:msg})});
+  fetch('https://formspree.io/f/mzdlaenk',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email,message:msg})});
   document.getElementById('form-fields').style.display='none';
   document.getElementById('form-success').style.display='block';
 }
