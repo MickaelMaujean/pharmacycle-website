@@ -1,2 +1,2 @@
 # pharmacycle-website
-Webiste of phamacycle
+Website of phamacycle
