@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité — Pharmacycle</title>
+  <meta name="description" content="Politique de confidentialité de l'application Pharmacycle et du site pharmacycle.eu : données collectées, hébergement, droits RGPD.">
+  <meta name="theme-color" content="#3BAD77">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pharmacycle">
+  <meta property="og:title" content="Politique de confidentialité — Pharmacycle">
+  <meta property="og:url" content="https://pharmacycle.eu/confidentialite.html">
+  <meta property="og:locale" content="fr_FR">
+
+  <style>
+    :root {
+      --ink:#1A1A2E; --green:#3BAD77; --green-2:#43BE82; --green-dark:#2E8C60;
+      --blue:#3B87C8; --blue-dark:#2C6699;
+      --amber-dark:#D98A0F; --amber-bg:#FDEFD6;
+      --surface:#FFFFFF; --soft:#F5F9F7; --soft-border:#EAF1ED;
+      --green-bg:#E4F4EC;
+      --text:#4A5568; --text-2:#5A6472; --muted:#6B7280; --faint:#9AA4A0;
+      --line:#EEF3F0;
+      --todo-bg:#FDEFD6; --todo-text:#B45309;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --maxw:1200px;
+      --gutter:clamp(20px, 5vw, 56px);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      background:var(--surface); color:var(--ink);
+      font-family:var(--font-body); font-size:16px; line-height:1.5;
+      -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    }
+    a { color:inherit; text-decoration:none; }
+    img, svg { display:block; }
+    h1, h2, h3 { font-family:var(--font-display); letter-spacing:-0.02em; }
+    :focus-visible { outline:3px solid var(--blue); outline-offset:2px; border-radius:4px; }
+
+    .container { width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+
+    /* ---------- Nav (same as index.html) ---------- */
+    .nav { border-bottom:1px solid var(--line); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; padding-block:18px; gap:20px; }
+    .brand { display:flex; align-items:center; gap:11px; }
+    .brand .name { font-family:var(--font-display); font-weight:800; font-size:22px; letter-spacing:-0.01em; }
+    .brand .name span { color:var(--green); }
+    .nav-right { display:flex; align-items:center; gap:28px; }
+    .nav-links { display:flex; align-items:center; gap:28px; font-size:15px; font-weight:600; color:var(--text); }
+    .nav-links a, .nav-links button { color:var(--text); background:none; border:none; font:inherit; cursor:pointer; padding:0; }
+    .nav-links a:hover, .nav-links button:hover { color:var(--ink); }
+    .btn-dark {
+      background:var(--ink); color:#fff; padding:10px 20px; border-radius:999px;
+      font-size:14.5px; font-weight:700; border:none; cursor:pointer;
+      font-family:var(--font-body); white-space:nowrap; transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn-dark:hover { transform:translateY(-1px); box-shadow:0 8px 20px rgba(26,26,46,0.25); }
+
+    /* ---------- Policy page ---------- */
+    .policy-hero {
+      background:linear-gradient(170deg,#F5FBF8 0%,#FFFFFF 62%);
+      padding-block:clamp(40px,6vw,64px);
+      text-align:center;
+    }
+    .eyebrow { font-size:13px; font-weight:700; letter-spacing:0.14em; color:var(--green); margin-bottom:12px; text-transform:uppercase; }
+    .policy-hero h1 { font-weight:900; font-size:clamp(30px,5vw,42px); letter-spacing:-0.02em; margin-bottom:10px; }
+    .policy-hero p { color:var(--text-2); font-size:16px; }
+
+    .policy-body { padding-block:clamp(40px,6vw,64px); }
+    .policy-content { max-width:760px; margin:0 auto; }
+
+    .policy-content h2 {
+      color:var(--green); font-weight:800; font-size:1.35rem;
+      margin-top:2.4em; padding-bottom:10px; border-bottom:2px solid var(--soft-border);
+    }
+    .policy-content h2:first-child { margin-top:0; }
+    .policy-content h3 { font-weight:800; font-size:1.05rem; margin-top:1.8em; color:var(--ink); }
+    .policy-content p { color:var(--text); line-height:1.65; margin-top:1em; }
+    .policy-content ul { padding-left:1.3em; margin-top:1em; }
+    .policy-content li { color:var(--text); line-height:1.65; margin-bottom:0.6em; }
+    .policy-content a { color:var(--blue); font-weight:600; }
+    .policy-content a:hover { text-decoration:underline; }
+
+    .todo {
+      background:var(--todo-bg); color:var(--todo-text);
+      font-style:italic; padding:1px 6px; border-radius:4px; font-size:0.95em;
+    }
+
+    /* ---------- Footer (same as index.html) ---------- */
+    .footer { border-top:1px solid var(--line); }
+    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-block:36px; }
+    .footer .brand .name { font-size:16px; }
+    .footer-links { display:flex; align-items:center; gap:22px; font-size:13px; flex-wrap:wrap; }
+    .footer-links a { color:var(--muted); }
+    .footer-links a.current { color:var(--text); font-weight:700; }
+    .footer-links a:hover { text-decoration:underline; }
+    .footer-links .copy { color:var(--faint); }
+
+    @media (max-width:640px) { .nav-links { display:none; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/" aria-label="Pharmacycle, accueil">
+        <svg width="34" height="34" viewBox="0 0 200 200" role="img" aria-label="Logo Pharmacycle">
+          <g fill="#3BAD77"><g transform="translate(146.77 73) rotate(60)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g><g transform="translate(100 154) rotate(180)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g><g transform="translate(53.23 73) rotate(300)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g></g>
+          <g transform="translate(100 46)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g>
+          <g transform="translate(146.8 127) rotate(120)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g>
+          <g transform="translate(53.2 127) rotate(240)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g>
+          <g stroke="#1A1A2E" stroke-width="6.5" stroke-linecap="round" fill="none"><path d="M76 84 L76 74 Q76 72 78 72 L88 72"/><path d="M124 84 L124 74 Q124 72 122 72 L112 72"/><path d="M76 116 L76 126 Q76 128 78 128 L88 128"/><path d="M124 116 L124 126 Q124 128 122 128 L112 128"/></g>
+          <g fill="#1A1A2E"><rect x="90" y="90" width="4" height="20" rx="2"/><rect x="98" y="90" width="4" height="20" rx="2"/><rect x="106" y="90" width="4" height="20" rx="2"/></g>
+        </svg>
+        <span class="name">Pharma<span>cycle</span></span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/#fonctionnalites">Fonctionnalités</a>
+          <a href="/#comment">Comment ça marche</a>
+          <a href="/#contact">Contact</a>
+        </div>
+        <a class="btn-dark" href="/#contact">Télécharger</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="policy-hero">
+    <div class="container">
+      <div class="eyebrow">Confidentialité</div>
+      <h1>Politique de confidentialité</h1>
+      <p>Application Pharmacycle (iOS) et site pharmacycle.eu</p>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <section class="policy-body">
+    <div class="container">
+      <div class="policy-content">
+
+        <h2>Article 1 : Préambule</h2>
+        <p>La présente politique de confidentialité a pour but d'informer les utilisateurs de l'application Pharmacycle et du site pharmacycle.eu :</p>
+        <ul>
+          <li>Sur la manière dont sont collectées leurs données personnelles. Sont considérées comme des données personnelles, toute information permettant d'identifier un utilisateur, telles que son adresse email, l'historique de son inventaire de médicaments ou son adresse IP (liste non exhaustive) ;</li>
+          <li>Sur les droits dont ils disposent concernant ces données ;</li>
+          <li>Sur la personne responsable du traitement des données à caractère personnel collectées et traitées ;</li>
+          <li>Sur les destinataires de ces données personnelles ;</li>
+          <li>Sur la politique en matière de cookies.</li>
+        </ul>
+        <p>Cette politique complète les mentions légales et les Conditions Générales d'Utilisation consultables à l'adresse suivante : <span class="todo">[URL des mentions légales / CGU sur pharmacycle.eu]</span></p>
+
+        <h2>Article 2 : Principes relatifs à la collecte et au traitement des données personnelles</h2>
+        <p>Conformément à l'article 5 du Règlement européen 2016/679 (RGPD), les données à caractère personnel sont :</p>
+        <ul>
+          <li>Traitées de manière licite, loyale et transparente au regard de la personne concernée ;</li>
+          <li>Collectées pour des finalités déterminées (cf. Article 3.1 des présentes), explicites et légitimes, et ne sont pas traitées ultérieurement d'une manière incompatible avec ces finalités ;</li>
+          <li>Adéquates, pertinentes et limitées à ce qui est nécessaire au regard des finalités pour lesquelles elles sont traitées ;</li>
+          <li>Exactes et, si nécessaire, tenues à jour ;</li>
+          <li>Conservées sous une forme permettant l'identification des personnes concernées pendant une durée n'excédant pas celle nécessaire au regard des finalités pour lesquelles elles sont traitées ;</li>
+          <li>Traitées de façon à garantir une sécurité appropriée des données collectées, y compris la protection contre le traitement non autorisé ou illicite et contre la perte, la destruction ou les dégâts d'origine accidentelle, à l'aide de mesures techniques ou organisationnelles appropriées.</li>
+        </ul>
+        <p>Le traitement n'est licite que si, et dans la mesure où, au moins une des conditions suivantes est remplie :</p>
+        <ul>
+          <li>La personne concernée a consenti au traitement de ses données à caractère personnel pour une ou plusieurs finalités spécifiques ;</li>
+          <li>Le traitement est nécessaire à l'exécution du contrat d'utilisation des Services auquel la personne concernée est partie ;</li>
+          <li>Le traitement est nécessaire au respect d'une obligation légale à laquelle le responsable du traitement est soumis ;</li>
+          <li>Le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement, à moins que ne prévalent les intérêts ou les libertés et droits fondamentaux de la personne concernée.</li>
+        </ul>
+        <p>Certaines des données traitées par Pharmacycle (informations relatives aux médicaments d'un utilisateur) peuvent constituer, par nature, des données concernant la santé au sens de l'article 9 du RGPD. Le traitement de ces données repose exclusivement sur le consentement explicite et éclairé de l'utilisateur, recueilli lors de la création de son compte et de l'utilisation des fonctionnalités de scan et de suivi de son inventaire de médicaments (article 9.2.a du RGPD). L'utilisateur peut retirer ce consentement à tout moment en supprimant son compte.</p>
+
+        <h2>Article 3 : Données à caractère personnel collectées et traitées</h2>
+
+        <h3>Article 3.1 : Données collectées</h3>
+        <p>Les données personnelles collectées dans le cadre de l'utilisation de Pharmacycle sont les suivantes :</p>
+        <ul>
+          <li>Données de compte : adresse email, mot de passe (stocké de façon chiffrée) ;</li>
+          <li>Données relatives à l'inventaire de médicaments : nom du médicament, dosage, date de péremption, quantité, ainsi que les informations issues du scan du code DataMatrix figurant sur les boîtes de médicaments (code CIP, numéro de lot, date de péremption) ;</li>
+          <li>Adresse IP et journaux techniques de connexion, générés automatiquement par tout accès à notre serveur (voir Article 3.2) ;</li>
+          <li>Données liées aux notifications : jeton de notification push (uniquement si l'utilisateur active les alertes de péremption).</li>
+        </ul>
+        <p>La collecte et le traitement de ces données répondent aux finalités suivantes : création et gestion du compte utilisateur, gestion de l'inventaire personnel de médicaments et calcul des dates de péremption, envoi d'alertes de péremption, amélioration et sécurisation du service, et support aux utilisateurs.</p>
+
+        <h3>Article 3.2 : Mode de collecte des données</h3>
+        <p>Lorsque vous utilisez l'application, votre adresse IP et des données de connexion basiques (horodatage, requête effectuée) sont automatiquement enregistrées par notre serveur, comme c'est le cas pour tout service en ligne.</p>
+        <p>D'autres données personnelles sont collectées lorsque vous effectuez les opérations suivantes : création d'un compte (email, mot de passe), scan d'une boîte de médicament, ajout manuel d'un médicament à votre inventaire, et activation des notifications de péremption.</p>
+        <p>Elles sont conservées par le responsable du traitement dans des conditions raisonnables de sécurité, pendant toute la durée d'utilisation du compte, et sont supprimées dans un délai de <span class="todo">[délai, ex. 30 jours]</span> suivant la suppression du compte par l'utilisateur, sauf obligation légale de conservation plus longue.</p>
+
+        <h3>Article 3.3 : Hébergement et sous-traitants des données</h3>
+        <p>Les données personnelles collectées par Pharmacycle sont hébergées et traitées par les prestataires suivants, agissant en qualité de sous-traitants au sens de l'article 28 du RGPD :</p>
+        <ul>
+          <li>FastAPI Labs, Inc. — FastAPI Cloud (hébergement du serveur applicatif / API) — 2261 Market Street STE 10109, San Francisco, CA 94114, États-Unis ;</li>
+          <li>Neon, Inc. (base de données PostgreSQL) — société du groupe Databricks, États-Unis ;</li>
+          <li>Brevo SAS (envoi des emails transactionnels : confirmation de compte, réinitialisation de mot de passe) — 106 boulevard Haussmann, 75008 Paris, France ;</li>
+          <li>Apple Inc. (distribution de l'application via l'App Store et envoi des notifications push) — Apple Distribution International, Hollyhill Industrial Estate, Cork, Irlande.</li>
+        </ul>
+        <p>Le cas échéant, lorsque les données sont hébergées ou traitées par des sous-traitants situés en dehors de l'Union européenne, ce transfert est encadré par les garanties appropriées prévues par le RGPD (clauses contractuelles types, ou tout autre mécanisme équivalent).</p>
+        <p>Les données personnelles des utilisateurs ne sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales ou publicitaires.</p>
+
+        <h3>Article 3.4 : Politique en matière de cookies</h3>
+        <p>Le site pharmacycle.eu et l'application Pharmacycle n'utilisent aucun cookie de mesure d'audience, publicitaire ou de traçage. Seules les données strictement nécessaires au fonctionnement du service (cf. Article 3.1) sont collectées.</p>
+
+        <h2>Article 4 : Responsable du traitement des données et délégué à la protection des données</h2>
+
+        <h3>Article 4.1 : Le responsable du traitement des données</h3>
+        <p>Les données à caractère personnel sont collectées par <span class="todo">[Nom et prénom de l'auto-entrepreneur]</span>, exerçant sous le statut d'auto-entrepreneur (micro-entreprise), immatriculé sous le numéro SIRET <span class="todo">[numéro SIRET]</span>.</p>
+        <p>Le responsable du traitement des données à caractère personnel peut être contacté de la manière suivante :</p>
+        <ul>
+          <li>Par courrier à l'adresse : <span class="todo">[adresse professionnelle déclarée]</span> ;</li>
+          <li>Par email : <a href="mailto:contact@pharmacycle.eu">contact@pharmacycle.eu</a>.</li>
+        </ul>
+
+        <h3>Article 4.2 : Le délégué à la protection des données</h3>
+        <p>Pharmacycle est un service en développement (micro-entreprise) et n'a pas, à ce stade, désigné de délégué à la protection des données (DPO) au sens de l'article 37 du RGPD, cette désignation n'étant pas obligatoire compte tenu de la nature et de l'échelle des traitements réalisés. Toute question relative à la protection des données personnelles peut être adressée à <a href="mailto:contact@pharmacycle.eu">contact@pharmacycle.eu</a>.</p>
+        <p>Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.</p>
+
+        <h2>Article 5 : Les droits de l'utilisateur en matière de collecte et de traitement des données</h2>
+        <p>Tout utilisateur concerné par le traitement de ses données personnelles peut se prévaloir des droits suivants, en application du RGPD et de la Loi Informatique et Libertés (Loi 78-17 du 6 janvier 1978) :</p>
+        <ul>
+          <li>Droit d'accès, de rectification et droit à l'effacement des données (articles 15, 16 et 17 du RGPD) ;</li>
+          <li>Droit à la portabilité des données (article 20 du RGPD) ;</li>
+          <li>Droit à la limitation (article 18 du RGPD) et à l'opposition du traitement des données (article 21 du RGPD) ;</li>
+          <li>Droit de ne pas faire l'objet d'une décision fondée exclusivement sur un procédé automatisé ;</li>
+          <li>Droit de déterminer le sort de ses données après la mort ;</li>
+          <li>Droit de saisir l'autorité de contrôle compétente (article 77 du RGPD).</li>
+        </ul>
+        <p>Pour exercer vos droits, veuillez adresser votre demande par email à <a href="mailto:contact@pharmacycle.eu">contact@pharmacycle.eu</a>, ou par courrier à l'adresse mentionnée à l'Article 4.1.</p>
+        <p>Afin que le responsable du traitement des données puisse faire droit à sa demande, l'utilisateur peut être tenu de lui communiquer certaines informations telles que : son nom, son adresse email, ainsi que son identifiant de compte.</p>
+        <p>Consultez le site <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a> pour plus d'informations sur vos droits.</p>
+
+        <h2>Article 6 : Conditions de modification de la politique de confidentialité</h2>
+        <p>L'éditeur de Pharmacycle se réserve le droit de modifier la présente Politique à tout moment afin d'assurer aux utilisateurs sa conformité avec le droit en vigueur.</p>
+        <p>L'utilisateur est invité à prendre connaissance de cette Politique à chaque fois qu'il utilise l'application, sans qu'il soit nécessaire de l'en prévenir formellement.</p>
+        <p>La présente politique, éditée le <span class="todo">[date de mise en ligne]</span>, a été mise à jour le 9 juillet 2026.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <svg width="26" height="26" viewBox="0 0 200 200" role="img" aria-label="Logo Pharmacycle"><g fill="#3BAD77"><g transform="translate(146.77 73) rotate(60)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g><g transform="translate(100 154) rotate(180)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g><g transform="translate(53.23 73) rotate(300)"><path d="M-9 -10 L7 0 L-9 10 L-4 0 Z"/></g></g><g transform="translate(100 46)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g><g transform="translate(146.8 127) rotate(120)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g><g transform="translate(53.2 127) rotate(240)"><path d="M0 -11 L-11 -11 A11 11 0 0 0 -11 11 L0 11 Z" fill="#3B87C8"/><path d="M0 -11 L11 -11 A11 11 0 0 1 11 11 L0 11 Z" fill="#43BE82"/></g></svg>
+        <span class="name">Pharmacycle</span>
+      </div>
+      <div class="footer-links">
+        <a href="/#contact">Contact</a>
+        <a href="/confidentialite.html" class="current">Politique de confidentialité</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <span class="copy">© 2026 · pharmacycle.eu</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
